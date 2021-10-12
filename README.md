@@ -1,5 +1,7 @@
 # Expenses-Tracker
 
+** Work in Progress **
+
 - Goal is to keep a daily track of expenses
 
 - Every day will have a total cost
