@@ -1,12 +1,10 @@
 import React from 'react';
-import InputForm from './components/InputForm.jsx';
 
-class App extends React.Component {
+class InputForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            wasIntroButtonClicked: false,
             inputItem: '',
             inputPrice: ''
         }
@@ -27,17 +25,16 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h2>Welcome to Expenses Tracker from App Component!</h2>
-                {/* <form>
+                <form>
                     <p>Item</p>
                     <input name="inputItem" onChange={this.handleInputChange} value={this.state.inputItem} />
                     <p>Price</p>
-                    <input name="inputPrice" onChange={this.handleInputChange} value={this.state.inputItem} />
-                </form> */}
-                <InputForm />
+                    <input name="inputPrice" onChange={this.handleInputChange} value={this.state.inputPrice} />
+                </form>
             </div>
         )
     }
+
 }
 
-export default App;
+export default InputForm;
