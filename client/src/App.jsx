@@ -1,11 +1,13 @@
 import React from 'react';
 import InputForm from './components/InputForm.jsx';
+import entrySeeds from '../../server/seeds.js';
 
 class App extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            entryList: [],
             wasIntroButtonClicked: false,
             inputItem: '',
             inputPrice: ''
@@ -28,12 +30,6 @@ class App extends React.Component {
         return (
             <div>
                 <h2>Welcome to Expenses Tracker from App Component!</h2>
-                {/* <form>
-                    <p>Item</p>
-                    <input name="inputItem" onChange={this.handleInputChange} value={this.state.inputItem} />
-                    <p>Price</p>
-                    <input name="inputPrice" onChange={this.handleInputChange} value={this.state.inputItem} />
-                </form> */}
                 <InputForm />
             </div>
         )

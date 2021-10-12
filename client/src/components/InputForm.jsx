@@ -10,26 +10,38 @@ class InputForm extends React.Component {
         }
 
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleInputSubmit = this.handleInputSubmit.bind(this);
     }
 
     handleInputChange(event) {
 
         this.setState({
             [event.target.name]: event.target.value
-        }, () => {
-            console.log('inputItem: ', this.state.inputItem);
         })
+    }
 
+    handleInputSubmit(event) {
+        event.preventDefault();
+
+        var entryObj = {
+            item: this.state.inputItem,
+            price: this.state.inputPrice,
+            date: new Date()
+        }
+
+        console.log('entryObj: ', entryObj);
     }
 
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleInputSubmit}>
                     <p>Item</p>
-                    <input name="inputItem" onChange={this.handleInputChange} value={this.state.inputItem} />
+                    <input name="inputItem" value={this.state.inputItem} onChange={this.handleInputChange} />
                     <p>Price</p>
-                    <input name="inputPrice" onChange={this.handleInputChange} value={this.state.inputPrice} />
+                    <input name="inputPrice" value={this.state.inputPrice} onChange={this.handleInputChange} />
+                    <p></p>
+                    <button>Submit</button>
                 </form>
             </div>
         )
