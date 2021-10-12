@@ -12,7 +12,11 @@ class EntryListItem extends React.Component {
     render() {
         return (
             <div>
-                <p>Hello from EntryListItem component!</p>
+                <p>{this.props.entry.item}</p>
+                <p>{this.props.entry.price.toFixed(2)}</p>
+                <p>{this.props.entry.date}</p>
+                <p></p>
+                <button>Remove Item</button>
             </div>
         )
     }

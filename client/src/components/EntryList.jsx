@@ -6,7 +6,7 @@ var EntryList = (props) => (
     <div>
         <h4>Hello from EntryList Component!</h4>
         {props.list.map((item, index) => 
-            <EntryListItem item={item} key={index} />
+            <EntryListItem entry={item} key={index} />
         )}
     </div>
 
