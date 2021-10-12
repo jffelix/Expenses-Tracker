@@ -1,8 +1,13 @@
 var entrySeeds = [
     {
-        item: 'AWS Billing',
-        price: 0.99,
-        date: 'October 2, 2021'
+        item: 'Festival Tickets',
+        price: 600.00,
+        date: 'November 15, 2019'
+    },
+    {
+        item: 'AirBnb',
+        price: 400.00,
+        date: 'October 9, 2020'
     },
     {
         item: 'Backpack',
