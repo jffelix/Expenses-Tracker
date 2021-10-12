@@ -78,7 +78,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h2>Welcome to Expenses Tracker from App Component!</h2>
+                <h3>Add an item</h3>
                 <InputForm />
                 <EntryList list={this.state.itemList} />
                 <h2>Total: {this.state.totalPrice}</h2>
