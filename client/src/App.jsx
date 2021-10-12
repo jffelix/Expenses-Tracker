@@ -1,5 +1,7 @@
 import React from 'react';
 import InputForm from './components/InputForm.jsx';
+import EntryList from './components/EntryList.jsx';
+
 import entrySeeds from '../../server/seeds.js';
 
 class App extends React.Component {
@@ -7,7 +9,8 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            entryList: [],
+            itemList: entrySeeds,
+            // itemList: [],
             wasIntroButtonClicked: false,
             inputItem: '',
             inputPrice: ''
@@ -31,6 +34,7 @@ class App extends React.Component {
             <div>
                 <h2>Welcome to Expenses Tracker from App Component!</h2>
                 <InputForm />
+                <EntryList list={this.state.itemList} />
             </div>
         )
     }
