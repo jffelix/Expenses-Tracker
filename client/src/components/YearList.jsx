@@ -11,7 +11,7 @@ class YearList extends React.Component {
         }
 
         this.convertYearListToArray = this.convertYearListToArray.bind(this);
-        this.filterYearsFromList = this.filterYearsFromList.bind(this);
+        // this.filterYearsFromList = this.filterYearsFromList.bind(this);
     }
 
     componentDidMount() {
@@ -20,57 +20,48 @@ class YearList extends React.Component {
 
     convertYearListToArray() {
 
-        var yearArray = [];
-
-        for (var key in this.props.yearList) {
-            yearArray.push({
-                [key]: this.props.yearList[key]
-            })
-            // console.log('key: ', key);
-        }
+        var convertToArray = Object.entries(this.props.yearList);
 
         this.setState({
-            yearArrayList: yearArray
+            yearArrayList: convertToArray
         }, () => {
 
-            this.filterYearsFromList();
-
-            console.log('yearArrayList: ', this.state.yearArrayList);
+            console.log('convertToArray: ', convertToArray);
         })
 
     }
 
-    filterYearsFromList() {
+    // filterYearsFromList() {
 
-        var filteredYears = [];
-        var filteredItems = [];
+    //     var filteredYears = [];
+    //     var filteredItems = [];
 
-        for (var key in this.state.yearArrayList) {
-            var yearValuePair = this.state.yearArrayList[key];
-            // console.log('yearValuePair: ', yearValuePair);
-            for (var year in yearValuePair) {
-                filteredYears.push(year);
-                filteredItems.push(yearValuePair[year]);
-            }
-        }
+    //     for (var key in this.state.yearArrayList) {
+    //         var yearValuePair = this.state.yearArrayList[key];
+    //         // console.log('yearValuePair: ', yearValuePair);
+    //         for (var year in yearValuePair) {
+    //             filteredYears.push(year);
+    //             filteredItems.push(yearValuePair[year]);
+    //         }
+    //     }
 
-        this.setState({
-            yearsList: filteredYears,
-            itemList: filteredItems
-        }, () => {
-            console.log('yearsList: ', this.state.yearsList);
-            console.log('itemList: ', this.state.itemList);
-        })
+    //     this.setState({
+    //         yearsList: filteredYears,
+    //         itemList: filteredItems
+    //     }, () => {
+    //         console.log('yearsList: ', this.state.yearsList);
+    //         console.log('itemList: ', this.state.itemList);
+    //     })
 
-    }
+    // }
 
     render() {
 
         return (
 
             <div>
-                {this.state.yearArrayList.map((item, index) => 
-                    <YearListItem year={item} key={index} />
+                {this.state.yearArrayList.map((item, index) =>
+                    <YearListItem years={item[0]} items={item[1]} key={index} />
                 )}
             </div>
         )
