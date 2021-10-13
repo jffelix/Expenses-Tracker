@@ -1,11 +1,15 @@
 import React from 'react';
 
-var YearListItem = (props) => (
+var YearListItem = (props) => {
 
-    <div>
-        <h3>Insert Year Here</h3>
-    </div>
+    console.log('props.year: ', props.year);
+    
+    return (
+        <div>
+            <h3>Insert Year Here</h3>
+        </div>
+    )
 
-)
+}
 
 export default YearListItem;
