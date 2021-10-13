@@ -1,8 +1,18 @@
 var entrySeeds = [
     {
+        item: 'Road Trip - Arizona',
+        price: 214.73,
+        date: 'Feburary 17, 2019'
+    },
+    {
         item: 'Vacation - Mexico City',
         price: 950.52,
         date: 'Feburary 24, 2019'
+    },
+    {
+        item: 'Vacation - Toronto',
+        price: 561.98,
+        date: 'July 6, 2019'
     },
     {
         item: 'Vacation - NY',

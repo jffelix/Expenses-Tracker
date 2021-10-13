@@ -25,7 +25,7 @@ var YearListItem = (props) => {
         console.log('splitDate: ', splitDate);
     })
     // console.log('monthObj: ', monthObj);
-    
+
     var monthObjToArray = Object.entries(monthObj);
     // console.log('monthObjToArray: ', monthObjToArray);
 
@@ -47,7 +47,7 @@ var YearListItem = (props) => {
             )}
 
             <div>
-                <h3>Year Total: {yearTotal}</h3>
+                <h3>Year Total: {yearTotal.toFixed(2)}</h3>
             </div>
 
         </div>
