@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 class InputForm extends React.Component {
 
@@ -26,7 +27,7 @@ class InputForm extends React.Component {
         var entryObj = {
             item: this.state.inputItem,
             price: this.state.inputPrice,
-            date: new Date()
+            date: moment().format('LL')
         }
 
         console.log('entryObj: ', entryObj);

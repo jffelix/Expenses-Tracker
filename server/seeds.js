@@ -1,5 +1,10 @@
 var entrySeeds = [
     {
+        item: 'Car Service',
+        price: 1005.77,
+        date: 'Feburary 4, 2019'
+    },
+    {
         item: 'Road Trip - Arizona',
         price: 214.73,
         date: 'Feburary 17, 2019'
@@ -23,6 +28,11 @@ var entrySeeds = [
         item: 'Festival Tickets',
         price: 596.99,
         date: 'November 15, 2019'
+    },
+    {
+        item: 'AirBnb - Santa Barbara',
+        price: 335.28,
+        date: 'Feburary 8, 2020'
     },
     {
         item: 'AirBnb - LA',
