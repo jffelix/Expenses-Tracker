@@ -1,13 +1,28 @@
 var entrySeeds = [
     {
+        item: 'Vacation - Mexico City',
+        price: 950.50,
+        date: 'Feburary 24, 2019'
+    },
+    {
+        item: 'Vacation - NY',
+        price: 440.75,
+        date: 'November 3, 2019'
+    },
+    {
         item: 'Festival Tickets',
-        price: 600.00,
+        price: 596.99,
         date: 'November 15, 2019'
     },
     {
-        item: 'AirBnb',
-        price: 400.00,
+        item: 'AirBnb - LA',
+        price: 436.67,
         date: 'October 9, 2020'
+    },
+    {
+        item: 'Vacation - Sacramento',
+        price: 251.71,
+        date: 'November 28, 2020'
     },
     {
         item: 'Backpack',
