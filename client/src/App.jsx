@@ -65,7 +65,7 @@ class App extends React.Component {
             } else {
                 yearObj[splitDate[2]].push(item);
             }
-            console.log('splitDate: ', splitDate);
+            // console.log('splitDate: ', splitDate);
         })
 
         this.setState({
