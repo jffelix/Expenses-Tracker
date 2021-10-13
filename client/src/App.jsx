@@ -90,11 +90,17 @@ class App extends React.Component {
             return (
                 <div>
                     <h3>Add an item</h3>
-                    <InputForm />
+                    <div>
+                        <InputForm />
+                    </div>
                     {/* <EntryList list={this.state.itemList} />
                     <h2>Total: {this.state.totalPrice}</h2> */}
-    
-                    <YearList yearList={this.state.yearList} />
+                    <div>
+                        <YearList yearList={this.state.yearList} />
+                    </div>
+                    <div>
+                        <h2>Total Expenses: {this.state.totalPrice}</h2>
+                    </div>
                 </div>
             )
         }

@@ -11,7 +11,6 @@ class YearList extends React.Component {
         }
 
         this.convertYearListToArray = this.convertYearListToArray.bind(this);
-        // this.filterYearsFromList = this.filterYearsFromList.bind(this);
     }
 
     componentDidMount() {
@@ -28,32 +27,7 @@ class YearList extends React.Component {
 
             console.log('convertToArray: ', convertToArray);
         })
-
     }
-
-    // filterYearsFromList() {
-
-    //     var filteredYears = [];
-    //     var filteredItems = [];
-
-    //     for (var key in this.state.yearArrayList) {
-    //         var yearValuePair = this.state.yearArrayList[key];
-    //         // console.log('yearValuePair: ', yearValuePair);
-    //         for (var year in yearValuePair) {
-    //             filteredYears.push(year);
-    //             filteredItems.push(yearValuePair[year]);
-    //         }
-    //     }
-
-    //     this.setState({
-    //         yearsList: filteredYears,
-    //         itemList: filteredItems
-    //     }, () => {
-    //         console.log('yearsList: ', this.state.yearsList);
-    //         console.log('itemList: ', this.state.itemList);
-    //     })
-
-    // }
 
     render() {
 
@@ -95,3 +69,6 @@ class YearList extends React.Component {
 // }
 
 export default YearList;
+
+
+// CHECK TO SEE IF CAN BE CHANGED TO FUNCTIONAL COMPONENT
