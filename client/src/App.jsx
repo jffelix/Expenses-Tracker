@@ -1,6 +1,7 @@
 import React from 'react';
 import InputForm from './components/InputForm.jsx';
 import EntryList from './components/EntryList.jsx';
+import YearList from './components/YearList.jsx';
 
 import entrySeeds from '../../server/seeds.js';
 
@@ -76,14 +77,28 @@ class App extends React.Component {
     }
 
     render() {
-        return (
-            <div>
-                <h3>Add an item</h3>
-                <InputForm />
-                <EntryList list={this.state.itemList} />
-                <h2>Total: {this.state.totalPrice}</h2>
-            </div>
-        )
+
+        if (this.state.yearList === null) {
+            return (
+                <div>
+                    <h2>Loading . . .</h2>
+                </div>
+            )
+
+        } else {
+
+            return (
+                <div>
+                    <h3>Add an item</h3>
+                    <InputForm />
+                    {/* <EntryList list={this.state.itemList} />
+                    <h2>Total: {this.state.totalPrice}</h2> */}
+    
+                    <YearList yearList={this.state.yearList} />
+                </div>
+            )
+        }
+
     }
 }
 
