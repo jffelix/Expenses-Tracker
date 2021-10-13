@@ -10,6 +10,9 @@ var YearListItem = (props) => {
         yearTotal += item.price;
     })
 
+    // MONTH TOTAL?
+    // DAY TOTAL?
+
     return (
         <div>
             <h2>{props.years}</h2>

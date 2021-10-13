@@ -1,7 +1,7 @@
 var entrySeeds = [
     {
         item: 'Vacation - Mexico City',
-        price: 950.50,
+        price: 950.52,
         date: 'Feburary 24, 2019'
     },
     {
