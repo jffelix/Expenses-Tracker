@@ -21,10 +21,8 @@ class App extends React.Component {
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.addTotal = this.addTotal.bind(this);
-        // this.addTotalDay = this.addTotalDay.bind(this);
-        // this.addTotalMonth = this.addTotalMonth.bind(this);
-        // this.addTotalYear = this.addTotalYear.bind(this);
         this.categorizeByYear = this.categorizeByYear.bind(this);
+        this.addNewEntry = this.addNewEntry.bind(this);
     }
 
     componentDidMount() {
@@ -76,6 +74,18 @@ class App extends React.Component {
         // console.log('yearObj: ', yearObj);
     }
 
+    addNewEntry(entryObj) {
+        console.log('entryObj: ', entryObj);
+
+        this.setState({
+            itemList: [...this.state.itemList, entryObj]
+        }, () => {
+            console.log('updated itemList: ', this.state.itemList);
+        })
+
+        // item is being added to itemList, but is NOT rendering
+    }
+
     render() {
 
         if (this.state.yearList === null) {
@@ -91,7 +101,7 @@ class App extends React.Component {
                 <div>
                     <h3>Add an item</h3>
                     <div>
-                        <InputForm />
+                        <InputForm addNewEntry={this.addNewEntry} />
                     </div>
                     {/* <EntryList list={this.state.itemList} />
                     <h2>Total: {this.state.totalPrice}</h2> */}

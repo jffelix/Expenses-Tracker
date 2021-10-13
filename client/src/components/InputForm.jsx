@@ -29,8 +29,9 @@ class InputForm extends React.Component {
             price: this.state.inputPrice,
             date: moment().format('LL')
         }
+        // console.log('entryObj: ', entryObj);
 
-        console.log('entryObj: ', entryObj);
+        this.props.addNewEntry(entryObj);
     }
 
     render() {
