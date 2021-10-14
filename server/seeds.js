@@ -45,6 +45,11 @@ var entrySeeds = [
         date: 'November 28, 2020'
     },
     {
+        item: 'Vacation - Cancun',
+        price: 3029.41,
+        date: 'September 21, 2021'
+    },
+    {
         item: 'Backpack',
         price: 37.69,
         date: 'October 2, 2021'

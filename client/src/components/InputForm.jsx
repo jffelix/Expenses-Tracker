@@ -30,7 +30,6 @@ class InputForm extends React.Component {
             date: moment().format('LL')
         }
         // console.log('entryObj: ', entryObj);
-
         this.props.addNewEntry(entryObj);
     }
 

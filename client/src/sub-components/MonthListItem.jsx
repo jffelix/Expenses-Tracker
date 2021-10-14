@@ -10,6 +10,8 @@ var MonthListItem = (props) => {
     })
     // console.log('monthTotal: ', monthTotal);
 
+    // CATEGORIZE BY DAY HERE
+
     return (
         <div>
             <h3>{props.months}</h3>
