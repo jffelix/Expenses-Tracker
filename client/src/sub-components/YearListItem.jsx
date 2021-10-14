@@ -72,21 +72,40 @@ class YearListItem extends React.Component {
 
     render() {
 
-        return (
-            <div>
-                <h2>{this.props.years}</h2>
-    
-                <button onClick={this.toggleYearDropdown}>Expand Year</button>
-    
-                {this.state.monthObjToArray.map((month, index) => 
-                    <MonthListItem months={month[0]} days={month[1]} key={index} />
-                )}
-    
+        if (!this.state.wasYearDropdownClicked) {
+
+            return (
                 <div>
-                    <h3>Year Total: {this.state.yearTotal}</h3>
+                    <h2>{this.props.years}</h2>
+        
+                    <button onClick={this.toggleYearDropdown}>Expand Year</button>
+        
+                    <div>
+                        <h3>Year Total: {this.state.yearTotal}</h3>
+                    </div>
                 </div>
-            </div>
-        )
+            )
+
+        } else {
+
+            return (
+                <div>
+                    <h2>{this.props.years}</h2>
+        
+                    <button onClick={this.toggleYearDropdown}>Collapse Year</button>
+        
+                    {this.state.monthObjToArray.map((month, index) => 
+                        <MonthListItem months={month[0]} days={month[1]} key={index} />
+                    )}
+        
+                    <div>
+                        <h3>Year Total: {this.state.yearTotal}</h3>
+                    </div>
+                </div>
+            )
+
+        }
+
 
     }
 
