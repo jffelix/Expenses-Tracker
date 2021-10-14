@@ -64,9 +64,7 @@ class YearListItem extends React.Component {
     toggleYearDropdown() {
         this.setState(prevState => ({
             wasYearDropdownClicked: !prevState.wasYearDropdownClicked
-        }), () => {
-            console.log('wasYearDropdownClicked: ', this.state.wasYearDropdownClicked);
-        })
+        }))
     }
 
 
