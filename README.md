@@ -2,11 +2,12 @@
 
 ** Work in Progress **
 
-- Goal is to keep a daily track of expenses
+** Add item feature in progress **
+
+Welcome to Expenses Tracker! This is a simple application meant to calculate your total expenses. Simply type in an item name and price in the input fields, click submit to add the entry into the database, and the items will automatically sort itself based on the day you submitted it.
+
+Notable Features: 
 
 - Every day will have a total cost
 - Every month will have a total cost
 - Every year will have a total cost
-
-- Item entry with price will be added on a list for the day
-- When submitted each entry will display the list of expenses and total for the day
