@@ -7,15 +7,18 @@ class MonthListItem extends React.Component {
         super(props);
         this.state = {
             wasMonthDropdownClicked: false,
-            monthTotal: null
+            monthTotal: null,
+            dayObjToArray: []
         }
 
         this.calculateMonthTotal = this.calculateMonthTotal.bind(this);
         this.toggleMonthDropDown = this.toggleMonthDropDown.bind(this);
+        this.categorizeByDay = this.categorizeByDay.bind(this);
     }
 
     componentDidMount() {
         this.calculateMonthTotal();
+        this.categorizeByDay();
     }
 
     calculateMonthTotal() {
@@ -31,13 +34,37 @@ class MonthListItem extends React.Component {
         })
     }
 
+    categorizeByDay() {
+
+        var dayObj = {};
+
+        this.props.days.forEach(item => {
+            var splitDate = item.date.split(' ');
+
+            var splitDay = splitDate[1].split('');
+            splitDay.pop();
+
+            if (dayObj[splitDay] === undefined) {
+                dayObj[splitDay] = [item];
+            } else {
+                dayObj[splitDay].push(item);
+            }
+        })
+
+        var dayObjToArray = Object.entries(dayObj);
+        // console.log('dayObjToArray: ', dayObjToArray);
+        this.setState({
+            dayObjToArray: dayObjToArray
+        }, () => {
+            console.log('dayObjToArray: ', this.state.dayObjToArray);
+        })
+    }
+
     toggleMonthDropDown() {
         this.setState(prevState => ({
             wasMonthDropdownClicked: !prevState.wasMonthDropdownClicked
         }))
     }
-
-    // CATEGORIZE BY DAY HERE
 
     render() {
 
