@@ -43,11 +43,14 @@ class MonthListItem extends React.Component {
 
             var splitDay = splitDate[1].split('');
             splitDay.pop();
+            
+            var dayNoComma = splitDay.join('');
+            // console.log('dayNoComma: ', dayNoComma);
 
-            if (dayObj[splitDay] === undefined) {
-                dayObj[splitDay] = [item];
+            if (dayObj[dayNoComma] === undefined) {
+                dayObj[dayNoComma] = [item];
             } else {
-                dayObj[splitDay].push(item);
+                dayObj[dayNoComma].push(item);
             }
         })
 
