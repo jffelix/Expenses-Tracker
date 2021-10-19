@@ -4,7 +4,16 @@ var DayListItem = (props) => {
 
     return (
         <div>
-            <h4>Hello from DayListItem Component!</h4>
+            <h4>{props.days}</h4>
+
+            {props.items.map((item, index) => 
+                <div key={index}>
+                    <p>{item.item}</p>
+                    <p>{item.price}</p>
+                    <p>{item.date}</p>
+                    <button>Delete Item</button>
+                </div>
+            )}
         </div>
     )
 }

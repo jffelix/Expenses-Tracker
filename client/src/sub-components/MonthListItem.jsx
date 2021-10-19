@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import DayListItem from './DayListItem.jsx';
 
 class MonthListItem extends React.Component {
 
@@ -94,13 +95,17 @@ class MonthListItem extends React.Component {
         
                     <button onClick={this.toggleMonthDropDown}>Collapse Month</button>
         
-                    {this.props.days.map((item, index) =>
+                    {/* {this.props.days.map((item, index) =>
                         <div key={index}>
                             <p>{item.item}</p>
                             <p>{item.price}</p>
                             <p>{item.date}</p>
                             <button>Delete Item</button>
                         </div>
+                    )} */}
+
+                    {this.state.dayObjToArray.map((day, index) =>
+                        <DayListItem days={day[0]} items={day[1]} key={index} />
                     )}
         
                     <div>
