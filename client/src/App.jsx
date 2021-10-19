@@ -111,7 +111,7 @@ class App extends React.Component {
                     <div>
                         <YearList yearList={this.state.yearList} />
                     </div>
-                    <div>
+                    <div className="grandTotal">
                         <h2>Total Expenses: {this.state.totalPrice}</h2>
                     </div>
                 </div>

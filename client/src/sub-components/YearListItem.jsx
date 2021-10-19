@@ -2,6 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import MonthListItem from './MonthListItem.jsx';
 
+import '../../dist/styles.css';
+
 class YearListItem extends React.Component {
     
     constructor(props) {
@@ -77,7 +79,7 @@ class YearListItem extends React.Component {
         
                     <button onClick={this.toggleYearDropdown}>Expand Year</button>
         
-                    <div>
+                    <div className="yearTotal">
                         <h3>Year Total: {this.state.yearTotal}</h3>
                     </div>
                 </div>

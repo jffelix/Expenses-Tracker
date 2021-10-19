@@ -1,3 +1,7 @@
+.body {
+    padding: 15px;
+}
+
 .title {
     text-align: center;
 }
@@ -8,4 +12,12 @@
 
 .submitEntry {
     text-align: center;
+}
+
+.yearTotal {
+    text-align: right;
+}
+
+.grandTotal {
+    text-align: right;
 }
