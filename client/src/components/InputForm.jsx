@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import '../../dist/styles.css';
 
 class InputForm extends React.Component {
 
@@ -36,7 +37,7 @@ class InputForm extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleInputSubmit}>
+                <form onSubmit={this.handleInputSubmit} className="newEntry">
                     <p>Item</p>
                     <input name="inputItem" value={this.state.inputItem} onChange={this.handleInputChange} />
                     <p>Price</p>

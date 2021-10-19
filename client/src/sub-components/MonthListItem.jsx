@@ -94,15 +94,6 @@ class MonthListItem extends React.Component {
                     <h3>{this.props.months}</h3>
         
                     <button onClick={this.toggleMonthDropDown}>Collapse Month</button>
-        
-                    {/* {this.props.days.map((item, index) =>
-                        <div key={index}>
-                            <p>{item.item}</p>
-                            <p>{item.price}</p>
-                            <p>{item.date}</p>
-                            <button>Delete Item</button>
-                        </div>
-                    )} */}
 
                     {this.state.dayObjToArray.map((day, index) =>
                         <DayListItem days={day[0]} items={day[1]} key={index} />

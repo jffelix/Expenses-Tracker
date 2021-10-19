@@ -3,6 +3,8 @@ import InputForm from './components/InputForm.jsx';
 import EntryList from './components/EntryList.jsx';
 import YearList from './components/YearList.jsx';
 
+import '../dist/styles.css';
+
 import entrySeeds from '../../server/seeds.js';
 
 class App extends React.Component {
@@ -99,7 +101,8 @@ class App extends React.Component {
 
             return (
                 <div>
-                    <h3>Add an item</h3>
+                    <h1 className="title" >Expenses Tracker</h1>
+                    <h3 className="newEntry">Add an item</h3>
                     <div>
                         <InputForm addNewEntry={this.addNewEntry} />
                     </div>
