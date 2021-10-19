@@ -41,6 +41,7 @@ class MonthListItem extends React.Component {
         this.props.days.forEach(item => {
             var splitDate = item.date.split(' ');
 
+            // Remove comma from day
             var splitDay = splitDate[1].split('');
             splitDay.pop();
             
