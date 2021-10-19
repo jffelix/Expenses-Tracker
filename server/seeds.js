@@ -68,7 +68,12 @@ var entrySeeds = [
         item: 'Blender',
         price: 69.99,
         date: 'October 12, 2021'
-    },    
+    },
+    {
+        item: 'Door',
+        price: 42.55,
+        date: 'October 12, 2021'
+    }    
 ];
 
 export default entrySeeds;

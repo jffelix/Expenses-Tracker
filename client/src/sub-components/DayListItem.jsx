@@ -2,6 +2,14 @@ import React from 'react';
 
 var DayListItem = (props) => {
 
+    // var dayTotal = 0;
+
+    // props.items.forEach(item => {
+    //     dayTotal += item.price;
+    // })
+
+    // console.log('dayTotal: ', dayTotal);
+
     return (
         <div>
             <h4>{props.days}</h4>
