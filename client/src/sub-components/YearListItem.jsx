@@ -97,7 +97,7 @@ class YearListItem extends React.Component {
                         <MonthListItem months={month[0]} days={month[1]} key={index} />
                     )}
         
-                    <div>
+                    <div className="yearTotal">
                         <h3>Year Total: {this.state.yearTotal}</h3>
                     </div>
                 </div>
