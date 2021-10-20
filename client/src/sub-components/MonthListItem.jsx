@@ -80,7 +80,7 @@ class MonthListItem extends React.Component {
                 <div className="monthEntry">
                     <h3>{this.props.months}</h3>
         
-                    <button onClick={this.toggleMonthDropDown}>Expand Month</button>
+                    <button className="expandMonth" onClick={this.toggleMonthDropDown}>Expand Month</button>
         
                     <div className="monthTotal">
                         <h4>Month Total: {this.state.monthTotal}</h4>
@@ -94,7 +94,7 @@ class MonthListItem extends React.Component {
                 <div>
                     <h3>{this.props.months}</h3>
         
-                    <button onClick={this.toggleMonthDropDown}>Collapse Month</button>
+                    <button className="expandMonth" onClick={this.toggleMonthDropDown}>Collapse Month</button>
 
                     {this.state.dayObjToArray.map((day, index) =>
                         <DayListItem days={day[0]} items={day[1]} key={index} />

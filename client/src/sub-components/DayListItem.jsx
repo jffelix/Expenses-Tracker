@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../dist/styles.css';
 
 var DayListItem = (props) => {
 
@@ -11,15 +12,15 @@ var DayListItem = (props) => {
     // console.log('dayTotal: ', dayTotal);
 
     return (
-        <div>
-            <h4>{props.days}</h4>
+        <div className="dayEntry">
+            <h4 className="centerDay">{props.days}</h4>
 
             {props.items.map((item, index) => 
                 <div key={index}>
                     <p>{item.item}</p>
                     <p>{item.price}</p>
                     <p>{item.date}</p>
-                    <button>Delete Item</button>
+                    <button className="deleteItem">Delete Item</button>
                 </div>
             )}
         </div>

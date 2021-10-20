@@ -51,6 +51,7 @@ input {
     background-color: rgb(168, 164, 164);
     color: white;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .yearTotal {
@@ -69,8 +70,39 @@ input {
     border-radius: 20px;
 }
 
+.expandMonth {
+    border-style: none;
+    padding: 8px;
+    background-color: rgb(168, 164, 164);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;    
+}
+
 .monthTotal {
     text-align: right;
+}
+
+.dayEntry {
+    border-style: outset;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(56, 173, 134);
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* .centerDay {
+    text-align: center;
+} */
+
+.deleteItem {
+    border-style: none;
+    padding: 8px;
+    background-color: rgb(168, 164, 164);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;       
 }
 
 .grandTotal {
