@@ -8,7 +8,7 @@ class InputForm extends React.Component {
         super(props);
         this.state = {
             inputItem: '',
-            inputPrice: ''
+            inputPrice: []
         }
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -25,9 +25,12 @@ class InputForm extends React.Component {
     handleInputSubmit(event) {
         event.preventDefault();
 
+        // parseFloat gives decimal, parseInt does not
+        var convertToNum = parseFloat(this.state.inputPrice);
+
         var entryObj = {
             item: this.state.inputItem,
-            price: this.state.inputPrice,
+            price: convertToNum,
             date: moment().format('LL')
         }
         // console.log('entryObj: ', entryObj);
