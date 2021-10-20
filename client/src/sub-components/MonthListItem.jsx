@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import DayListItem from './DayListItem.jsx';
+import '../../dist/styles.css';
 
 class MonthListItem extends React.Component {
 
@@ -76,12 +77,12 @@ class MonthListItem extends React.Component {
         if (!this.state.wasMonthDropdownClicked) {
 
             return (
-                <div>
+                <div className="monthEntry">
                     <h3>{this.props.months}</h3>
         
                     <button onClick={this.toggleMonthDropDown}>Expand Month</button>
         
-                    <div>
+                    <div className="monthTotal">
                         <h4>Month Total: {this.state.monthTotal}</h4>
                     </div>
                 </div>
@@ -99,7 +100,7 @@ class MonthListItem extends React.Component {
                         <DayListItem days={day[0]} items={day[1]} key={index} />
                     )}
         
-                    <div>
+                    <div className="monthTotal">
                         <h4>Month Total: {this.state.monthTotal}</h4>
                     </div>
                 </div>

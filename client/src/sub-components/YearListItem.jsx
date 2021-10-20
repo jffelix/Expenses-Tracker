@@ -77,7 +77,7 @@ class YearListItem extends React.Component {
                 <div className="yearEntry">
                     <h2>{this.props.years}</h2>
         
-                    <button onClick={this.toggleYearDropdown}>Expand Year</button>
+                    <button className="expandYear" onClick={this.toggleYearDropdown}>Expand Year</button>
         
                     <div className="yearTotal">
                         <h3>Year Total: {this.state.yearTotal}</h3>
@@ -88,10 +88,10 @@ class YearListItem extends React.Component {
         } else {
 
             return (
-                <div>
+                <div className="yearEntry">
                     <h2>{this.props.years}</h2>
         
-                    <button onClick={this.toggleYearDropdown}>Collapse Year</button>
+                    <button className="expandYear" onClick={this.toggleYearDropdown}>Collapse Year</button>
         
                     {this.state.monthObjToArray.map((month, index) => 
                         <MonthListItem months={month[0]} days={month[1]} key={index} />

@@ -1,7 +1,7 @@
 body {
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(240, 243, 242);
+    color: black;
 }
 
 .body {
@@ -11,12 +11,18 @@ body {
 
 .title {
     text-align: center;
-    color: grey;
+    color: black;
 }
 
 .newEntry {
     text-align: center;
     color: grey;
+}
+
+input {
+    padding: 6px;
+    border-style: none;
+    border-radius: 10px;
 }
 
 .submitEntry {
@@ -39,10 +45,35 @@ body {
     border-radius: 20px;
 }
 
+.expandYear {
+    border-style: none;
+    padding: 8px;
+    background-color: rgb(168, 164, 164);
+    color: white;
+    border-radius: 10px;
+}
+
 .yearTotal {
+    text-align: right;
+    margin-top: 30px;
+    border-top: solid;
+    border-color:rgb(168, 164, 164);
+    border-width: thin;
+}
+
+.monthEntry {
+    border-style: outset;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(83, 207, 166);
+    border-radius: 20px;
+}
+
+.monthTotal {
     text-align: right;
 }
 
 .grandTotal {
+    color: black;
     text-align: right;
 }
