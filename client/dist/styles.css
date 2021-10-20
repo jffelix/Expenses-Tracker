@@ -1,6 +1,6 @@
 body {
     background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;;
     color: black;
 }
 
@@ -81,6 +81,10 @@ input {
 
 .monthTotal {
     text-align: right;
+    margin-top: 30px;
+    border-top: solid;
+    border-color:rgb(129, 126, 126);
+    border-width: thin;
 }
 
 .dayEntry {
