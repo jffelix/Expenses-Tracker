@@ -46,7 +46,7 @@ class InputForm extends React.Component {
                     <p>Price</p>
                     <input name="inputPrice" value={this.state.inputPrice} onChange={this.handleInputChange} />
                     <p></p>
-                    <button>Submit</button>
+                    <button className="submitButton">Submit</button>
                 </form>
             </div>
         )

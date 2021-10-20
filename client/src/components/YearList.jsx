@@ -1,5 +1,6 @@
 import React from 'react';
 import YearListItem from '../sub-components/YearListItem.jsx';
+import '../../dist/styles.css';
 
 class YearList extends React.Component {
     constructor(props) {

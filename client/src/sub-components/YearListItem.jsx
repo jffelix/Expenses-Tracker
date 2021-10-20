@@ -74,7 +74,7 @@ class YearListItem extends React.Component {
         if (!this.state.wasYearDropdownClicked) {
 
             return (
-                <div>
+                <div className="yearEntry">
                     <h2>{this.props.years}</h2>
         
                     <button onClick={this.toggleYearDropdown}>Expand Year</button>
