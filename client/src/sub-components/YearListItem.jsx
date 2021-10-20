@@ -75,7 +75,7 @@ class YearListItem extends React.Component {
 
             return (
                 <div className="yearEntry">
-                    <h2>{this.props.years}</h2>
+                    <h2 className="yearNumber">{this.props.years}</h2>
         
                     <button className="expandYear" onClick={this.toggleYearDropdown}>Expand Year</button>
         
@@ -89,7 +89,7 @@ class YearListItem extends React.Component {
 
             return (
                 <div className="yearEntry">
-                    <h2>{this.props.years}</h2>
+                    <h2 className="yearNumber">{this.props.years}</h2>
         
                     <button className="expandYear" onClick={this.toggleYearDropdown}>Collapse Year</button>
         

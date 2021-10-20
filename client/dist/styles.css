@@ -45,12 +45,17 @@ input {
     border-radius: 20px;
 }
 
+.yearNumber {
+    font-size: 28px;
+}
+
 .expandYear {
     border-style: none;
-    padding: 8px;
-    background-color: rgb(168, 164, 164);
-    color: white;
-    border-radius: 10px;
+    font-size: 14px;
+    padding: 6px;
+    background-color: rgb(247, 243, 243);
+    color: rgb(153, 147, 147);
+    border-radius: 8px;
     margin-bottom: 10px;
 }
 
@@ -99,7 +104,7 @@ input {
     border-style: outset;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: rgb(56, 173, 134);
+    background-color: rgb(64, 187, 146);
     border-radius: 20px;
     text-align: center;
 }
