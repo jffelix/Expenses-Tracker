@@ -100,7 +100,7 @@ class App extends React.Component {
         } else {
 
             return (
-                <div>
+                <div className="body">
                     <h1 className="title" >Expenses Tracker</h1>
                     <h3 className="newEntry">Add an item</h3>
                     <div>
