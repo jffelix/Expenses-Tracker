@@ -91,7 +91,7 @@ class MonthListItem extends React.Component {
         } else {
 
             return (
-                <div>
+                <div className="collapseMonth">
                     <h3>{this.props.months}</h3>
         
                     <button className="expandMonth" onClick={this.toggleMonthDropDown}>Collapse Month</button>

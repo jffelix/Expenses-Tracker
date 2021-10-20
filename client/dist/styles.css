@@ -54,6 +54,10 @@ input {
     margin-bottom: 10px;
 }
 
+.collapseYear {
+    text-align: center;
+}
+
 .yearTotal {
     text-align: right;
     margin-top: 30px;
@@ -77,6 +81,10 @@ input {
     color: white;
     border-radius: 10px;
     margin-bottom: 10px;    
+}
+
+.collapseMonth {
+    text-align: center;
 }
 
 .monthTotal {
