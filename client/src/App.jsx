@@ -2,7 +2,6 @@ import React from 'react';
 import InputForm from './components/InputForm.jsx';
 import EntryList from './components/EntryList.jsx';
 import YearList from './components/YearList.jsx';
-
 import '../dist/styles.css';
 
 import entrySeeds from '../../server/seeds.js';
