@@ -7,6 +7,12 @@ const port = 4001;
 
 const mongoose = require('mongoose');
 
+// mongoose.connect('mongodb://localhost/expensesList', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useCreateIndex: true
+// });
+
 app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, '../client/dist')));
