@@ -19,4 +19,5 @@ Notable Features:
 - Fork this repo and git clone the repo into your personal computer
 - Open VS Code with your git cloned file
 - Run "npm run build" in a seperate Terminal
-- Open index.html in dist folder with Google Chrome
+- Run "npm start" in seperate Terminal
+- Access application in Google Chrome using localhost:4001
