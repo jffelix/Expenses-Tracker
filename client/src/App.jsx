@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import InputForm from './components/InputForm.jsx';
 import EntryList from './components/EntryList.jsx';
 import YearList from './components/YearList.jsx';
@@ -20,6 +21,7 @@ class App extends React.Component {
             totalPrice: null
         }
 
+        this.showAllItems = this.showAllItems.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
         this.addTotal = this.addTotal.bind(this);
         this.categorizeByYear = this.categorizeByYear.bind(this);
@@ -27,8 +29,19 @@ class App extends React.Component {
     }
 
     componentDidMount() {
+        this.showAllItems();
         this.addTotal();
         this.categorizeByYear();
+    }
+
+    showAllItems() {
+        axios.get('/items')
+        .then(response => {
+            console.log('response data: ', response.data);
+        })
+        .catch(err => {
+            console.log('Error received from showAllItems: ', err);
+        })
     }
 
     handleInputChange(event) {
