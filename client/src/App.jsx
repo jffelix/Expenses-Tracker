@@ -12,8 +12,8 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            itemList: entrySeeds,
-            // itemList: [],
+            // itemList: entrySeeds,
+            itemList: [],
             yearList: null,
             wasIntroButtonClicked: false,
             inputItem: '',
@@ -30,14 +30,20 @@ class App extends React.Component {
 
     componentDidMount() {
         this.showAllItems();
-        this.addTotal();
-        this.categorizeByYear();
+        // this.addTotal();
+        // this.categorizeByYear();
     }
 
     showAllItems() {
         axios.get('/items')
         .then(response => {
             console.log('response data: ', response.data);
+            this.setState({
+                itemList: response.data
+            }, () => {
+                this.addTotal();
+                this.categorizeByYear();
+            })
         })
         .catch(err => {
             console.log('Error received from showAllItems: ', err);
@@ -58,6 +64,7 @@ class App extends React.Component {
         var totalPrice = 0;
 
         this.state.itemList.forEach(item => {
+            console.log('item: ', item);
             totalPrice += item.price
         })
 
