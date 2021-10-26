@@ -8,11 +8,7 @@ const port = 4001;
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/expensesList', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true
-});
+mongoose.connect('mongodb://localhost/expensesList');
 
 app.use(express.json());
 app.use(cors());
