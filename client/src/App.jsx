@@ -66,7 +66,7 @@ class App extends React.Component {
         var totalPrice = 0;
 
         this.state.itemList.forEach(item => {
-            console.log('item: ', item);
+            // console.log('item: ', item);
             totalPrice += item.price
         })
 
@@ -91,8 +91,6 @@ class App extends React.Component {
 
         this.setState({
             yearList: yearObj
-        }, () => {
-            console.log('yearList: ', this.state.yearList);
         })
         // console.log('yearObj: ', yearObj);
     }
