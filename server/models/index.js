@@ -22,7 +22,7 @@ ExpensesItem.create(itemList)
     console.log('Populated collection!');
 })
 .catch(err => {
-    console.log('Error received at ExpensesItem.create in models');
+    console.log('Error received at ExpensesItem.create in models: ', err);
 })
 
 module.exports.expensesItem = ExpensesItem;

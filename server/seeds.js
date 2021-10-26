@@ -76,4 +76,4 @@ var entrySeeds = [
     }    
 ];
 
-export default entrySeeds;
+module.exports = entrySeeds;
