@@ -102,16 +102,25 @@ class App extends React.Component {
         axios.post('/items', entryObj)
         .then(response => {
             console.log('response.data: ', response.data);
+
+            this.setState({
+                itemList: [...this.state.itemList, response.data]
+            }, () => {
+                this.showAllItems();
+                
+                console.log('updated itemList: ', this.state.itemList);
+            })
+
         })
         .catch(err => {
             console.log('Error received from addNewEntry: ', err);
         })
 
-        this.setState({
-            itemList: [...this.state.itemList, entryObj]
-        }, () => {
-            console.log('updated itemList: ', this.state.itemList);
-        })
+        // this.setState({
+        //     itemList: [...this.state.itemList, entryObj]
+        // }, () => {
+        //     console.log('updated itemList: ', this.state.itemList);
+        // })
 
         // item is being added to itemList, but is NOT rendering
     }
