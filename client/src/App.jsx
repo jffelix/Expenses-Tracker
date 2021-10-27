@@ -37,15 +37,15 @@ class App extends React.Component {
     showAllItems() {
         axios.get('/items')
         .then(response => {
-
             console.log('response data: ', response.data);
+            
             this.setState({
                 itemList: response.data
-            }, () => {
-                // Car service entry is not showing
-                this.addTotal();
-                this.categorizeByYear();
             })
+        })
+        .then(() => {
+            this.addTotal();
+            this.categorizeByYear();
         })
         .catch(err => {
             console.log('Error received from showAllItems: ', err);

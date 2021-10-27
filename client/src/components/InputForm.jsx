@@ -23,7 +23,9 @@ class InputForm extends React.Component {
     }
 
     handleInputSubmit(event) {
-        event.preventDefault();
+        // commented out event.preventDefault due to added entry only displaying when page is refreshed
+
+        // event.preventDefault();
 
         // parseFloat gives decimal, parseInt does not
         var convertToNum = parseFloat(this.state.inputPrice);
