@@ -7,7 +7,7 @@ body {
 .body {
     padding: 10px 40px;
     background-color: rgb(198, 250, 232);
-    margin: 0 100px;
+    margin: 0 350px;
 }
 
 .title {
@@ -126,4 +126,16 @@ input {
 .grandTotal {
     color: black;
     text-align: right;
+}
+
+@media all and (max-width: 1401px) {
+    .body {
+        margin: 0 200px
+    }
+}
+
+@media all and (max-width: 850px) {
+    .body {
+        margin: 0 100px
+    }
 }
