@@ -140,8 +140,20 @@ input {
     }
 }
 
+@media all and (max-width: 550px) {
+    .body {
+        margin: 0px
+    }
+}
+
 @media all and (max-width: 480px) {
     .body {
         margin: 0px
+    }
+}
+
+@media all and (max-width: 320px) {
+    .body {
+        margin: 0px 0px;
     }
 }
