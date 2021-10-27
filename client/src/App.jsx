@@ -98,6 +98,8 @@ class App extends React.Component {
     addNewEntry(entryObj) {
         console.log('entryObj: ', entryObj);
 
+        // create Axios POST request
+
         this.setState({
             itemList: [...this.state.itemList, entryObj]
         }, () => {
