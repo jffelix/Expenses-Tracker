@@ -106,11 +106,13 @@ class App extends React.Component {
             this.setState({
                 itemList: [...this.state.itemList, response.data]
             }, () => {
-                this.showAllItems();
-                
                 console.log('updated itemList: ', this.state.itemList);
             })
 
+        })
+        .then(() => {
+            // new item is added to database, but doesn't render unless refreshed
+            this.showAllItems();
         })
         .catch(err => {
             console.log('Error received from addNewEntry: ', err);
