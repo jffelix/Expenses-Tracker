@@ -16,6 +16,8 @@ class IndividualItem extends React.Component {
 
         axios.delete(`/items/${selectedItem._id}`)
         .then(response => {
+            
+            // deleted item doesn't go away unless page refreshes
             this.props.showAllItems();
 
             console.log('Succesfully connected with DELETE request in Axios!');
