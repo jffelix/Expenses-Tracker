@@ -12,8 +12,9 @@ class IndividualItem extends React.Component {
 
     deleteItem() {
         var selectedItem = this.props.items;
+        console.log('selectedItem._id: ', selectedItem._id);
 
-        axios.delete('/items', selectedItem._id)
+        axios.delete(`/items/${selectedItem._id}`)
         .then(response => {
             this.props.showAllItems();
 
@@ -23,7 +24,7 @@ class IndividualItem extends React.Component {
             console.log('Error received with DELETE request in Axios', err);
         })
 
-        // console.log('item._id: ', selectedItem._id);
+ 
     }
 
     render() {
