@@ -58,7 +58,9 @@ class MonthListItem extends React.Component {
         })
 
         var dayObjToArray = Object.entries(dayObj);
-        // console.log('dayObjToArray: ', dayObjToArray);
+
+        console.log('dayObjToArray: ', dayObjToArray);
+        
         this.setState({
             dayObjToArray: dayObjToArray
         })
