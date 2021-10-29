@@ -36,7 +36,11 @@ class YearList extends React.Component {
 
             <div>
                 {this.state.yearArrayList.map((item, index) =>
-                    <YearListItem years={item[0]} items={item[1]} key={index} />
+                    <YearListItem 
+                    years={item[0]} 
+                    items={item[1]} 
+                    key={index}
+                    showAllItems={this.props.showAllItems} />
                 )}
             </div>
         )

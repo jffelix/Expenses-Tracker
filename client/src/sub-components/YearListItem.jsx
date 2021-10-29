@@ -94,7 +94,11 @@ class YearListItem extends React.Component {
                     <button className="expandYear" onClick={this.toggleYearDropdown}>Collapse Year</button>
         
                     {this.state.monthObjToArray.map((month, index) => 
-                        <MonthListItem months={month[0]} days={month[1]} key={index} />
+                        <MonthListItem 
+                        months={month[0]} 
+                        days={month[1]} 
+                        key={index}
+                        showAllItems={this.props.showAllItems} />
                     )}
         
                     <div className="yearTotal">

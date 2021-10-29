@@ -148,7 +148,9 @@ class App extends React.Component {
                     {/* <EntryList list={this.state.itemList} />
                     <h2>Total: {this.state.totalPrice}</h2> */}
                     <div>
-                        <YearList yearList={this.state.yearList} />
+                        <YearList 
+                        yearList={this.state.yearList}
+                        showAllItems={this.showAllItems} />
                     </div>
                     <div className="grandTotal">
                         <h2>Total Expenses: {this.state.totalPrice}</h2>

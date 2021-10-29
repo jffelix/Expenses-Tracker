@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 class IndividualItem extends React.Component {
     constructor(props) {
@@ -10,7 +11,19 @@ class IndividualItem extends React.Component {
     }
 
     deleteItem() {
-        console.log('item._id: ', this.props.items._id);
+        var selectedItem = this.props.items;
+
+        axios.delete('/items', selectedItem._id)
+        .then(response => {
+            this.props.showAllItems();
+
+            console.log('Succesfully connected with DELETE request in Axios!');
+        })
+        .catch(err => {
+            console.log('Error received with DELETE request in Axios', err);
+        })
+
+        // console.log('item._id: ', selectedItem._id);
     }
 
     render() {
