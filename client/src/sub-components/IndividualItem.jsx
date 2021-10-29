@@ -6,6 +6,11 @@ class IndividualItem extends React.Component {
         this.state = {
             selectedItem: []
         }
+        this.deleteItem = this.deleteItem.bind(this);
+    }
+
+    deleteItem() {
+        console.log('Hello from deleteItem!');
     }
 
     render() {
@@ -16,7 +21,7 @@ class IndividualItem extends React.Component {
                         <p>{item.item}</p>
                         <p>{item.price}</p>
                         <p>{item.date}</p>
-                        <button className="deleteItem">Delete Item</button>
+                        <button className="deleteItem" onClick={this.deleteItem}>Delete Item</button>
                     </div>
                 )}
             </div>
