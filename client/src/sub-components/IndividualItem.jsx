@@ -10,20 +10,18 @@ class IndividualItem extends React.Component {
     }
 
     deleteItem() {
-        console.log('Hello from deleteItem!');
+        console.log('item._id: ', this.props.items._id);
     }
 
     render() {
         return (
             <div>
-                {this.props.items.map((item, index) => 
-                    <div key={index}>
-                        <p>{item.item}</p>
-                        <p>{item.price}</p>
-                        <p>{item.date}</p>
-                        <button className="deleteItem" onClick={this.deleteItem}>Delete Item</button>
-                    </div>
-                )}
+
+                <p>{this.props.items.item}</p>
+                <p>{this.props.items.price}</p>
+                <p>{this.props.items.date}</p>
+                <button className="deleteItem" onClick={this.deleteItem}>Delete Item</button>
+
             </div>
         )
     }

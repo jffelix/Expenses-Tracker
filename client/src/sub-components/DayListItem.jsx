@@ -8,16 +8,9 @@ var DayListItem = (props) => {
         <div className="dayEntry">
             <h4 className="centerDay">{props.days}</h4>
 
-            {/* {props.items.map((item, index) => 
-                <div key={index}>
-                    <p>{item.item}</p>
-                    <p>{item.price}</p>
-                    <p>{item.date}</p>
-                    <button className="deleteItem">Delete Item</button>
-                </div>
-            )} */}
-
-            <IndividualItem items={props.items} />
+            {props.items.map((item, index) => 
+                <IndividualItem items={item} key={index} />
+            )}
         </div>
     )
 }
