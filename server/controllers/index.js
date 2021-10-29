@@ -24,6 +24,14 @@ const controllers = {
             res.status(400).send(err);
             console.log('Error received from postItems in controllers.');
         })
+    },
+
+    deleteItems: function(req, res) {
+        var id = {
+            _id: req.params.id
+        }
+
+        console.log('Hello from deleteItems in controllers!');
     }
 }
 

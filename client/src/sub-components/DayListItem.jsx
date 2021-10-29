@@ -1,30 +1,58 @@
 import React from 'react';
 import '../../dist/styles.css';
 
-var DayListItem = (props) => {
+class DayListItem extends React.Component {
 
-    // var dayTotal = 0;
+    constructor(props) {
+        super(props);
+        this.state = {
 
-    // props.items.forEach(item => {
-    //     dayTotal += item.price;
-    // })
+        }
+    }
 
-    // console.log('dayTotal: ', dayTotal);
+    render() {
 
-    return (
-        <div className="dayEntry">
-            <h4 className="centerDay">{props.days}</h4>
+        return (
+            <div className="dayEntry">
+                <h4 className="centerDay">{this.props.days}</h4>
+    
+                {this.props.items.map((item, index) => 
+                    <div key={index}>
+                        <p>{item.item}</p>
+                        <p>{item.price}</p>
+                        <p>{item.date}</p>
+                        <button className="deleteItem">Delete Item</button>
+                    </div>
+                )}
+            </div>
+        )
 
-            {props.items.map((item, index) => 
-                <div key={index}>
-                    <p>{item.item}</p>
-                    <p>{item.price}</p>
-                    <p>{item.date}</p>
-                    <button className="deleteItem">Delete Item</button>
-                </div>
-            )}
-        </div>
-    )
+    }
+    
 }
 
 export default DayListItem;
+
+
+
+
+// FUNCTIONAL COMPONENT BACKUP CODE
+
+
+// var DayListItem = (props) => {
+
+//     return (
+//         <div className="dayEntry">
+//             <h4 className="centerDay">{props.days}</h4>
+
+//             {props.items.map((item, index) => 
+//                 <div key={index}>
+//                     <p>{item.item}</p>
+//                     <p>{item.price}</p>
+//                     <p>{item.date}</p>
+//                     <button className="deleteItem">Delete Item</button>
+//                 </div>
+//             )}
+//         </div>
+//     )
+// }
