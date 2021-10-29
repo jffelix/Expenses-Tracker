@@ -31,25 +31,23 @@ const controllers = {
         var id = {
             _id: req.params.id
         }
-
-        // console.log('req.params: ', id);
         
-        // dbHelpers.find(id)
-        // .then(response => {
+        dbHelpers.find(id)
+        .then(response => {
 
-        //     dbHelpers.deleteOne(id)
-        //     .then(data => {
-        //         res.status(200).send(data);
-        //         console.log('Successfully connected with dbHelpers.deleteOne in controllers!')
-        //     })
-        //     .catch(err => {
-        //         res.status(400).send(err);
-        //         console.log('Error received during dbHelpers.deleteONe in controllers.')
-        //     })
-        // })
-        // .catch(err => {
-        //     console.log('Error received in deleteItems in controllers: ', err);
-        // })
+            dbHelpers.deleteOne(id)
+            .then(data => {
+                res.status(200).send(data);
+                console.log('Successfully connected with dbHelpers.deleteOne in controllers!')
+            })
+            .catch(err => {
+                res.status(400).send(err);
+                console.log('Error received during dbHelpers.deleteONe in controllers.')
+            })
+        })
+        .catch(err => {
+            console.log('Error received in deleteItems in controllers: ', err);
+        })
 
         // console.log('Hello from deleteItems in controllers!');
     }
