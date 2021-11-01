@@ -115,9 +115,14 @@ input {
     font-weight: bold;
 }
 
-/* .centerDay {
-    text-align: center;
-} */
+.price {
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.date {
+    font-style: italic
+}
 
 .deleteItem {
     border-style: none;

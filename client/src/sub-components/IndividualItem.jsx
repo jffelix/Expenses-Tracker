@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import '../../dist/styles.css';
 
 class IndividualItem extends React.Component {
     constructor(props) {
@@ -34,8 +35,8 @@ class IndividualItem extends React.Component {
             <div>
 
                 <p>{this.props.items.item}</p>
-                <p>{this.props.items.price}</p>
-                <p>{this.props.items.date}</p>
+                <p className="price">{this.props.items.price}</p>
+                <p className="date">{this.props.items.date}</p>
                 <button className="deleteItem" onClick={this.deleteItem}>Delete Item</button>
 
             </div>
